@@ -476,7 +476,7 @@ static bool EnumDevice(const GUID &type, IMoniker *deviceInfo,
 
     // Ignore cameras that are not useful for face tracking anyways and might cause issues on new NVIDIA drivers
     if (deviceName.bstrVal && type == CLSID_VideoInputDeviceCategory)
-        if (wcsstr(deviceName.bstrVal, L"VSeeFaceCamera") != nullptr || wcsstr(deviceName.bstrVal, L"VTubeStudioCam") != nullptr || wcsstr(deviceName.bstrVal, L"VMC_Camera") != nullptr || wcsstr(deviceName.bstrVal, L"Unity Video Capture") != nullptr)
+        if (wcsstr(deviceName.bstrVal, L"VSeeFaceCamera") != nullptr || wcsstr(deviceName.bstrVal, L"VTubeStudioCam") != nullptr || wcsstr(deviceName.bstrVal, L"VMC_Camera") != nullptr || wcsstr(deviceName.bstrVal, L"3tene Screen Capture") != nullptr || wcsstr(deviceName.bstrVal, L"Unity Video Capture") != nullptr)
             return true;
 
 	propertyData->Read(L"DevicePath", &devicePath, NULL);
